@@ -121,7 +121,7 @@ class GistClient(object):
       print
       print '  %s' % fname
       print '    %s' % jret['files'][fname]['raw_url']
-      print '    <script src="https://gist.github.com/%s?%s"></script>' % (
+      print '    <script src="https://gist.github.com/%s.js?%s"></script>' % (
           jret['id'],
           urllib.urlencode({'file': fname}),
           )
