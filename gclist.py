@@ -29,10 +29,10 @@ import urllib2
 
 __program__ = 'gclist'
 __author__ = 'Yu-Jie Lin'
-__copyright__ = 'Copyright 2011'
+__copyright__ = 'Copyright 2011, 2012'
 __credits__ = ['Yu-Jie Lin']
 __license__ = 'MIT'
-__version__ = '0.1'
+__version__ = '0.2'
 __maintainer__ = 'Yu-Jie Lin'
 __email__ = 'livibetter@gmail.com'
 __status__ = 'Development'
@@ -120,6 +120,7 @@ class GistClient(object):
     for fname in jret['files']:
       print
       print '  %s' % fname
+      print '    %s#%s' % (jret['html_url'], urllib.quote(fname))
       print '    %s' % jret['files'][fname]['raw_url']
       print '    <script src="https://gist.github.com/%s.js?%s"></script>' % (
           jret['id'],
